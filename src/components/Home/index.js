@@ -26,23 +26,21 @@ class Home extends Component {
     const {teamList} = this.state
 
     return (
-      <>
-        <div className="bg-container">
-          <div className="logo-container">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
-              alt="ipl logo"
-              className="logo-image"
-            />
-            <h1>IPL Dashboard</h1>
-            <ul>
-              {teamList.map(each => (
-                <TeamCard details={each} key={each} />
-              ))}
-            </ul>
-          </div>
+      <div className="bg-container">
+        <div className="logo-container">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
+            alt="ipl logo"
+            className="logo-image"
+          />
+          <h1>IPL Dashboard</h1>
+          <ul>
+            {teamList.map(each => (
+              <TeamCard details={each} key={each} />
+            ))}
+          </ul>
         </div>
-      </>
+      </div>
     )
   }
 }
